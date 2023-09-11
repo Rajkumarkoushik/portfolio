@@ -1,38 +1,350 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Urbanist" sans-serif;
+}
+h1{
+  font-size: 55px;
+  font-weight: 700;
+}
+h2{
+  font-size: 48px;
+  font-weight: 700;
+}
+h4{
+  font-size: 32px;
+  font-weight: 700;
+}
+h6{
+  font-size: 18px;
+  font-weight: 600;
+}
+p{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: justify;
+  color: var(--secondary-black-color);
+}
+a{
+  text-decoration: none;
+}
+:root {
+  --orange-color: #FF6B00;
+  --black-color: #101010;
+  --secondary-black-color: #606060;
+  --light-color: #FFF5EF;
+}
+
+/* scrollbar style starts. */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--light-color); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orange-color); 
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-black-color); 
+}
+/* Scroll bar style ends. */
+
+/* 
+1. SideBar section.
+2. Home Banner section.
+3.Resume section.
+4. Contact section.
+5. Pre loader section.
+6. Projects section.
+*/
+
+/* 1. Side bar section starts. */
+.sticky-sidebar{
+  position: fixed;
+  width: 17%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  height: 100%;
+} 
+.sidebar-navigation{
+  margin-top: 100px;
+  position: relative;
+}
+.sidebar-navigation li{
+    font-size: 18px;
+    transition: all .3s;
+    font-weight: 600;
+    padding: 15px 0px;
+    list-style: none;
+    position: relative;
+}
+.sidebar-navigation li a{
+  color: var(--black-color);
+}
+.sidebar-navigation li::before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  left: -30px;
+  top: 44%;
+}
+.sidebar-navigation::before{
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 77%;
+  left: 12px;
+  background-color: #000;
+  top: 34px;
+}
+.sidebar-navigation li.active::before {
+  background-color: var(--orange-color);
+  border-color: var(--orange-color);
+}
+/* 1. Side bar section ends. */
+
+/* 2. Home banner section starts. */
+.home-banner{
+  background-color: var(--light-color);
+}
+.banner-image img{
+  border-radius: 50%;
+  height: 375px;
+  width: 375px;
+  margin-left: 70px;
+  margin-top: 70px;
+}
+.banner-image img:nth-child(1){
+  z-index: +2;
+  position: relative;
+}
+.banner-image img:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: floatUpDown 2s infinite linear;
+}
+@keyframes floatUpDown {
+  0% {
+      transform: translateY(-10px)
+  }
+
+  50% {
+      transform: translateY(10px)
+  }
+
+  100% {
+      transform: translateY(-10px)
+  }
+}
+.banner-image{
+  position: relative;
+}
+.home-button{
+    padding: 10px 20px;
+    background-color: var(--orange-color);
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    transition: all ease-in-out 0.4s;
+}
+.home-button a{
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.home-button:hover{
+  background-color: var(--secondary-black-color);
+  transition: all ease-in-out 0.4s;
+}
+.home-span{
+  color: var(--orange-color);
+}
+/* 2. Home banner section ends. */
+
+/* 3. Resume section starts. */
+.resume-exp{
+  border-bottom: 1px solid var(--orange-color);
+  padding: 20px 0px;
+}
+.exp-years{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--orange-color);
+}
+.resume-head img{
+height: 25px;
+}
+.resume-head{
+  gap: 5px;
+}
+.button-span i{
+  animation: floatUpDown 2s infinite linear;
+}
+/* 3. Resume section ends. */
+
+/* 4. Contact section starts. */
+.form-flex, .contact-address{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.form-flex input{
+  width: 330px;
+  height: 45px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid var(--light-color);
+  border-radius: 10px;
+  outline: none;
+}
+.form-flex input:focus, textarea:focus{
+  box-shadow: 0 0 0 0.25rem rgba(255, 107, 0, 0.2);
+}
+textarea{
+  width: 100%;
+  height: 120px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid var(--light-color);
+  border-radius: 10px;
+  outline: none;
+  padding-top: 20px;
+}
+.contact-button{
+  color: #fff;
+  margin-top: 40px;
+}
+.contact-address p i{
+  font-size: 20px;
+  border-radius: 10px;
+  color: var(--orange-color);
+  background-color: var(--light-color);
+  padding: 20px;
+}
+.contact-address p a{
+  color: var(--secondary-black-color);
+}
+/* 4. Contact section ends. */
+
+/* 5. Pre loader section starts. */
+.preloader{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-black-color);
+  z-index: +9;
+}
+.loader h4{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--light-color);
+}
+.loader span{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 57%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  background-color: var(--orange-color);
+  border-radius: 50%;
+  -webkit-animation: loading 1s infinite alternate;
+  animation: loading 1s infinite alternate;
+}
+.loader span:nth-child(2){
+ animation-delay: 0.2s;
+ -webkit-animation-delay: 0.2s;
+  background-color: #008FB2;
+  margin-left: 20px;
+}
+.loader span:nth-child(3){
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  background-color: #009B9E;
+  margin-left: 40px;
+}
+.loader span:nth-child(4){
+  animation-delay: 0.6s;
+ -webkit-animation-delay: 0.6s;
+  background-color: #00A77D;
+  margin-left: 60px;
+}
+.loader span:nth-child(5){
+  animation-delay: 0.8s;
+ -webkit-animation-delay: 0.8s;
+  background-color: #00B247;
+  margin-left: 80px;
+}
+.loader span:nth-child(6){
+  animation-delay: 10s;
+  -webkit-animation-delay: 1.0s;
+  background-color: #5AB027;
+  margin-left: 100px;
+}
+.loader span:nth-child(7){
+  animation-delay: 1.2s;
+ -webkit-animation-delay: 1.2s;
+  background-color: #A0B61E;
+  margin-left: 120px;
+}
+@-webkit-keyframes loading {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes loading {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+/* 5. Pre loader section ends. */
+
+/* 6. Projects section starts. */
+.form-flex img{
+  height: 250px;
+  width: 100%;
+  margin: 20px 0px;
+}
+.projects-main{
+  background-color: var(--light-color);
+}
+.tabs-buttons{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.react-tabs__tab-list {
+   border-bottom: none !important; 
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.react-tabs__tab--selected {
+  background: transparent !important;
+  border: none !important;
 }
+/* 6. Projects section ends. */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
