@@ -5,7 +5,7 @@ import "react-tabs/style/react-tabs.css";
 function Projects() {
   return (
     <>
-      <section className="p-5 projects-main">
+      <section id="projects" className="projects-main">
         <div className="text-center">
           <div className="d-flex justify-content-center resume-head">
             <img src="\assets\orangeDot.png" alt="" />
@@ -33,7 +33,7 @@ function Projects() {
                   <p>
                     <a
                       href="https://makersmind.co.in/"
-                      title="makersmind.co.in"
+                      title="makersmind.co.in" rel="noopener noreferrer"
                       target="_blank"
                     >
                       <img src="\assets\completed-1.png" alt="Project 1" />
@@ -42,10 +42,19 @@ function Projects() {
                   <p>
                     <a
                       href="https://atapcloud.com/"
-                      title="atapcloud.com"
+                      title="atapcloud.com" rel="noopener noreferrer"
                       target="_blank"
                     >
                       <img src="\assets\completed-2.png" alt="Project 2" />
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="https://rsservicecenter.co.in"
+                      title="rsservicecenter.co.in" rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <img src="\assets\completed-5.png" alt="Project 5" />
                     </a>
                   </p>
                 </div>
@@ -53,7 +62,7 @@ function Projects() {
                   <p>
                     <a
                       href="https://sgservicecenter.com/"
-                      title="sgservicecenter.com"
+                      title="sgservicecenter.com" rel="noopener noreferrer"
                       target="_blank"
                     >
                       <img src="\assets\completed-3.png" alt="Project 3" />
@@ -62,10 +71,19 @@ function Projects() {
                   <p>
                     <a
                       href="http://pastorvpaul.com/"
-                      title="pastorvpaul.com"
+                      title="pastorvpaul.com" rel="noopener noreferrer"
                       target="_blank"
                     >
                       <img src="\assets\completed-4.png" alt="Project 4" />
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="https://www.sanmarine.in/"
+                      title="sanmarine.in" rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <img src="\assets\completed-6.png" alt="Project 6" />
                     </a>
                   </p>
                 </div>

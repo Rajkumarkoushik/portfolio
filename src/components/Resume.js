@@ -4,7 +4,7 @@ function Resume() {
   return (
       <>
           {/* Resume section starts. */}
-            <section className='py-5'>
+            <section id='resume' className='py-5'>
                 <div className='text-center'>
                     <div className='d-flex justify-content-center resume-head'>
                         <img src="\assets\orangeDot.png" alt="" />

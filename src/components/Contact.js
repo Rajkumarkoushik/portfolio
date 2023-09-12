@@ -4,7 +4,7 @@ function Contact() {
   return (
     <>
       {/* Contact section starts.  */}
-      <section className="py-5">
+      <section id="contact" className="pt-65">
         <div className="text-center">
           <div className="d-flex justify-content-center resume-head">
             <img src="\assets\orangeDot.png" alt="" />
@@ -14,10 +14,9 @@ function Contact() {
             <h2>I WANT TO HEAR FROM YOU</h2>
           </div>
         </div>
-        <div className="container-fluid py-5">
+        <div className="container-fluid contact-form">
           <div className="row g-5">
             <div className="col-lg-8">
-              <div>
                 <form action="">
                   <div className="form-flex">
                     <input type="text" placeholder="Your Name" /> <br />
@@ -33,12 +32,11 @@ function Contact() {
                     Send Me Message
                   </button>
                 </form>
-              </div>
             </div>
             <div className="col-lg-4">
               <div className="contact-address">
                 <p>
-                  <a href="https://goo.gl/maps/E2JBro3p6RotmHq69" target="_blank">
+                  <a href="https://goo.gl/maps/E2JBro3p6RotmHq69" target="_blank" rel="noopener noreferrer">
                     {" "}
                     <i className="fa-solid fa-location-dot" ></i>
                   </a>
@@ -47,9 +45,9 @@ function Contact() {
                   <h6>Address</h6>
                   <p>
                     {" "}
-                    <a href="https://goo.gl/maps/E2JBro3p6RotmHq69" target="_blank">
+                    <a href="https://goo.gl/maps/E2JBro3p6RotmHq69" target="_blank" rel="noopener noreferrer">
                       {" "}
-                      Jalluru Village, Pithapuram Mandal, Kakinada District
+                      Jalluru Village, Pithapuram Mandal, Kakinada District, Andhra Pradesh.
                     </a>
                   </p>
                 </div>

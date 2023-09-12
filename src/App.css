@@ -18,6 +18,10 @@ h4{
   font-size: 32px;
   font-weight: 700;
 }
+h5{
+  font-size: 24px;
+  font-weight: 700;
+}
 h6{
   font-size: 18px;
   font-weight: 600;
@@ -31,6 +35,15 @@ p{
 }
 a{
   text-decoration: none;
+}
+li{
+  list-style: none;
+}
+ol, ul {
+  padding-left: 0px !important;
+}
+.pt-65{
+  padding: 65px 0px;
 }
 :root {
   --orange-color: #FF6B00;
@@ -62,6 +75,8 @@ a{
 4. Contact section.
 5. Pre loader section.
 6. Projects section.
+7. Footer section.
+8. Navigation section.
 */
 
 /* 1. Side bar section starts. */
@@ -103,13 +118,30 @@ a{
   position: absolute;
   width: 1px;
   height: 77%;
-  left: 12px;
+  left: 4px;
   background-color: #000;
   top: 34px;
 }
-.sidebar-navigation li.active::before {
+.sidebar-navigation li.active-link::before {
   background-color: var(--orange-color);
   border-color: var(--orange-color);
+}
+.aside-links{
+  display: flex;
+  gap: 10px;
+}
+.aside-links i{
+  font-size: 18px;
+  color:var(--light-color);
+  background-color: var(--orange-color);
+  padding: 5px 8px;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+.aside-links i:hover{
+  background-color:var(--light-color);
+  color: var(--orange-color);
+  transition: all 0.4s ease-in-out;
 }
 /* 1. Side bar section ends. */
 
@@ -130,7 +162,7 @@ a{
 }
 .banner-image img:nth-child(2){
   position: absolute;
-  top: 0;
+  top: -50px;
   left: 0;
   animation: floatUpDown 2s infinite linear;
 }
@@ -159,6 +191,7 @@ a{
     text-transform: capitalize;
     border: 1px solid transparent;
     transition: all ease-in-out 0.4s;
+    color: #fff;
 }
 .home-button a{
   color: #fff;
@@ -170,6 +203,9 @@ a{
   transition: all ease-in-out 0.4s;
 }
 .home-span{
+  color: var(--orange-color);
+}
+.home-skills{
   color: var(--orange-color);
 }
 /* 2. Home banner section ends. */
@@ -202,7 +238,7 @@ height: 25px;
   align-items: center;
 }
 .form-flex input{
-  width: 330px;
+  width: 100%;
   height: 45px;
   padding-left: 10px;
   font-size: 14px;
@@ -238,6 +274,9 @@ textarea{
 }
 .contact-address p a{
   color: var(--secondary-black-color);
+}
+.contact-form{
+  padding-top: 3rem;
 }
 /* 4. Contact section ends. */
 
@@ -333,6 +372,7 @@ textarea{
 }
 .projects-main{
   background-color: var(--light-color);
+  padding: 3rem;
 }
 .tabs-buttons{
   text-align: center;
@@ -347,4 +387,51 @@ textarea{
 }
 /* 6. Projects section ends. */
 
+/* 7. Footers section starts. */
+.footer-copyright{
+  background-color: var(--light-color);
+}
+.footer-copyright p{
+  text-align: center;
+  margin-bottom: 0 !important;
+  padding: 10px 0px;
+}
+/* 7. Footers section ends. */
 
+/* 8. Navigation section starts. */
+.navigation{
+  background-color: var(--light-color);
+  position: relative;
+  display: none;
+}
+.nav-hamburger span{
+  width: 29px;
+  height: 4px;
+  background-color: var(--black-color);
+  margin: 2px 0px;
+  border-radius: 10px;
+}
+.nav-hamburger{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.navigation-links{
+  position: fixed;
+    left: 0;
+    width: 100%;
+    height: 45vh;
+    z-index: +99;
+    background: #0c1923;
+}
+.navigation-links li{
+  text-transform: uppercase;
+  border-top: 1px solid rgba(255,255,255,.5);
+  font-size: 17px;
+  font-weight: 600;
+  padding: 10px 5%;
+}
+.navigation-links li a{
+  color: #fff;
+}
+/* 8. Navigation section ends. */
