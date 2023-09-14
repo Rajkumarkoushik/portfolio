@@ -6,8 +6,8 @@
         font-size: 40px;
     }
     p{
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 13px;
+        line-height: 23px;
     }
     .banner-image img {
         height: 305px;
@@ -46,21 +46,29 @@
         width: 375px;
         margin-top: 0px;
     }
-    
-    
+    .sticky-logo img{
+        width: auto;
+        height: 75px;
+      }   
 }
-
 
 /* Mobile responsive starts */
 @media(min-width: 320px) and (max-width: 767px){
     h1 {
-        font-size: 29px;
+        font-size: 30px;
     }
     h2{
         font-size: 27px;
     }
+    h4{
+        font-size: 22px;
+    }
     h6 {
-        font-size: 17px;
+        font-size: 16px;
+    }
+    p {
+        font-size: 12px;
+        line-height: 21px;
     }
     .banner-image img {
         height: 275px;
@@ -78,13 +86,13 @@
         height: 50px;
     }
     .navigation-links li {
-        font-size: 16px;
+        font-size: 14px;
     }
     .banner-image img:nth-child(2) {
         left: 0%;
     }
     .home-button {
-        padding: 10px 16px;
+        padding: 10px 19px;
         font-size: 12px;
     }
     .resume-exp{
@@ -97,6 +105,13 @@
     .form-flex img {
         margin: 10px 0px;
     }
-    
-    
+    .loader h4{
+        top: 50%;
+        left: 50%;
+      }
+      .loader span{
+        top: 59%;
+        left: 30%;
+      } 
 }
+

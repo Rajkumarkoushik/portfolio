@@ -12,7 +12,7 @@ function About() {
             <p>About Me</p>
           </div>
             <h2>
-              I Am An<span className="home-span"> Front-End</span> &#160; Web
+              I Am A<span className="home-span"> Front-End</span> &#160; Web
               Developer
             </h2>
             <p className="">

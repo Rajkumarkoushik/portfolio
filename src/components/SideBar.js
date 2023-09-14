@@ -45,7 +45,7 @@ function SideBar() {
       <aside className="container-fluid aside-bar">
         <section className="row">
           <div className="sticky-sidebar p-5">
-            <div>
+            <div className="sticky-logo">
               <img src="\assets\Logo.png" alt="Logo" />
             </div>
             <nav>
@@ -90,7 +90,7 @@ function SideBar() {
           <div class="loader">
             <h4>Rajkumar Koushik Reddi</h4>
             <span></span>
-            <span></span>
+            <span></span> 
             <span></span>
             <span></span>
             <span></span>

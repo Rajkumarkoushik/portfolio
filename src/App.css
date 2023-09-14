@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body{
-  font-family: "Urbanist" sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 h1{
   font-size: 55px;
@@ -142,6 +142,9 @@ ol, ul {
   background-color:var(--light-color);
   color: var(--orange-color);
   transition: all 0.4s ease-in-out;
+}
+.sticky-logo img{
+  width: 100%;
 }
 /* 1. Side bar section ends. */
 
@@ -401,8 +404,10 @@ textarea{
 /* 8. Navigation section starts. */
 .navigation{
   background-color: var(--light-color);
-  position: relative;
+  position: sticky;
   display: none;
+  top: 0px;
+  z-index: +99;
 }
 .nav-hamburger span{
   width: 29px;
@@ -410,6 +415,22 @@ textarea{
   background-color: var(--black-color);
   margin: 2px 0px;
   border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+.nav-remove span:nth-child(1){
+  content:'';
+  transform: rotate(230deg);
+  transition: all 0.4s ease-in-out;
+}
+.nav-remove span:nth-child(3){
+  content:'';
+  transform: rotate(-230deg);
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+}
+.nav-remove span:nth-child(2){
+  content:'';
+  transform: translateY(100px);
 }
 .nav-hamburger{
   display: flex;
@@ -420,9 +441,14 @@ textarea{
   position: fixed;
     left: 0;
     width: 100%;
-    height: 45vh;
     z-index: +99;
     background: #0c1923;
+    transform: scale(0);
+    transition: all 0.4s ease-in-out;
+}
+.open{
+  transform: scale(1);
+  transition: all 0.4s ease-in-out;
 }
 .navigation-links li{
   text-transform: uppercase;

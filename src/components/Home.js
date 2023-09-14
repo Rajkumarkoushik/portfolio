@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Typed from 'typed.js';
 
 function Home() {
@@ -38,7 +38,7 @@ function Home() {
             <h5 className="home-skills">My Skills :-</h5>
             <p>HTML5, CSS3, BOOTSTRAP, JAVA SCRIPT, JQUERY, REACT, REDUX, SASS, PHP, MYSQL, GIT, GITHUB, FIGMA, JSON.</p>
             <button className="home-button">
-              <a href="\assets\RajkumarkoushikReddi-resume.pdf" target="_blank">
+              <a href="\assets\Rajkumar koushik Reddi-resume.pdf" target="_blank">
                 Download My CV &#160;{" "}
                 <span className="button-span">
                   <i className="fa-solid fa-angles-down"></i>
